@@ -1,0 +1,168 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Ex5</title>
+    <style>
+    /*inspired from: https://www.w3schools.com/howto/howto_css_three_columns.asp */
+    * {
+        box-sizing: border-box;
+      }
+    
+    /* Create three 300px columns that floats next to each other */
+    .column {
+        float: left;
+        width: 300px;
+        padding: 10px;
+    }
+    
+    /* Clear floats after the columns */
+    .column:after {
+        content: "****************";
+        display: table;
+        clear: both;
+    }
+      table {
+       width:100%;
+      
+      }
+      table, th, td{
+        border-collapse:collapse;
+        border: 1px solid black 
+      }
+      
+    </style>
+    </head>
+    <body>
+    
+    <div class="row">
+    
+      <div class="column">
+        
+        <ul>
+        	<li>Eintrag</li>
+        	<li>Zweitrag</li>
+        	<li>Dreitrag</li>
+        </ul>
+        
+        <ul style ="list-style-type:none">
+        	<li> Eintrag</li>
+        	<li>Zweitrag</li>
+        	<li>Dreitrag</li>
+        </ul>
+        
+        <ul style ="list-style-type:circle">
+        	<li> Eintrag</li>
+        	<li>Zweitrag</li>
+        	<li>Dreitrag</li>
+        </ul>
+        
+        <ol>    
+        	<li>Eintrag</li>
+        	<li>Zweitrag</li>
+        	<li>Dreitrag</li>
+        </ol>
+        
+        <ol type = "i">    
+        	<li>Eintrag</li>
+        	<li>Zweitrag</li>
+        	<li>Dreitrag</li>
+        </ol>
+        
+        <div>-----------------</div>
+        
+        <ol start ="4">    
+        <li>Eintrag</li>
+        <li>Zweitrag</li>
+        <li>Dreitrag</li>
+        </ol>
+        
+      </div>
+      <div class="column">
+     	<ol>
+         	<li>First Step</li>
+        	<li>Second Step</li>
+        	<li>Now...</li> 
+          		<ul style ="list-style-type:circle">
+        			<li>Going</li>
+        			<li>Deeper</li>
+        		</ul>
+        	<li>Third Step</li> 
+        </ol>
+        
+        <div>-----------------</div>
+        
+        <ol type = "I">
+         	<li>Chapter</li>
+          		<ol type = "i">
+        			<li>Subchap</li>
+        			<li>Another subchap</li>
+        		</ol>
+        	<li>Next Chapter</li> 
+          		<ol type = "i">
+        			<li>Subchap</li>
+        			<li>Another subchap</li>
+        		</ol>
+        </ol>
+        
+      </div>
+      <div class="column">
+       	<table>
+          <caption>Eine Überschrift </caption>
+        	<tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Age</th>
+          	</tr>
+          
+        	<tr>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>50</td>
+          	</tr>
+          
+          	<tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td>94</td>
+          	</tr>
+          
+          	<tr>
+              <td>Eve</td>
+              <td>Jackson</td>
+              <td rowspan = "3">40</td>
+          	</tr>
+          
+          	<tr>
+              <td>Daniel</td>
+              <td>Jackson</td>
+          	</tr>
+          
+          	<tr>
+              <td>Mary</td>
+              <td>Jackson</td>
+          	</tr>
+          
+          	<tr>
+              <td>Michael</td>
+              <td>Jackson</td>
+              <td>--</td>
+          	</tr>
+          
+          	<tr>
+              <th colspan = "2">Name</th>
+              <td></td>
+          	</tr>
+          
+        	<tr>
+              <td colspan = "2">George Duke</td>
+              <td>64</td>
+          	</tr>
+          
+        </table>
+      </div>
+    
+    </div>
+    
+    </body>
+    </html>

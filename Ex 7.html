@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ex7 BMI Form</title>
+<style>
+  #age, #weight, #tallness {
+    left: 300px;
+  	position: absolute;
+  }
+  #dsA, #dsW, #dsT {
+    left: 150px;
+  	position: absolute;
+  }
+  
+  #button{
+  padding: 10px 20px;
+  }
+</style>
+</head>
+<body>
+<!-- Build a form to let the user input data for BMI calculation-->
+  <form onsubmit="calculateBMI(this)">
+    <label for ="age">Age: </label>
+    <input oninput="age.value=dsA.value" id="dsA" type ="range" min="17" max= "90" step= "1" />
+    <input id="age" name ="age" type ="text" required/>
+    <p/>
+    <label for ="weight">Weight (kg): </label>
+    <input oninput="weight.value=dsW.value" id="dsW" type ="range" min="30" max= "120" step= "0,1" />
+    <input id="weight" name ="weight" type ="text" required/>
+    <p/>
+    <label for ="tallness">Tallness (cm): </label>
+    <input oninput="tallness.value=dsT.value" id="dsT" type ="range" min="140" max= "210" step= "1" />
+    <input id="tallness" name ="tallness" type ="text" required/>
+    <p/>
+    
+    <input id="button" type="submit" value="Calculate BMI" />
+    <h2 id = "BMI"></h2>
+  </form>
+  <script>
+  	function calculateBMI(form) {
+      	event.preventDefault();
+      	var BMI;
+      	var weight= form.weight.value;
+      	var height= form.tallness.value;
+      if (weight < 30 || weight > 120) {alert("Please input a different weight."); return null;}
+      if (height < 140 || height > 210) {alert("Please input a different height."); return null;}
+      
+    	BMI = weight/Math.pow((height/100),2);
+    	document.getElementById("BMI").innerHTML = "Your BMI value is: " + BMI + ".";
+    }
+  </script>
+</body>
+</html>
